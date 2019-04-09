@@ -1,0 +1,183 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_theme_red</item>
+        <item name="colorPrimaryDark">@color/app_theme_red</item>
+        <item name="colorAccent">@color/app_theme_red</item>
+
+    </style>
+
+
+<style name="MainTabLayout">
+    <item name="tabIndicatorColor">@android:color/transparent</item>
+    <item name="tabIndicatorHeight">0dp</item>
+    <item name="tabPaddingStart">12dp</item>
+    <item name="tabPaddingEnd">12dp</item>
+</style>
+
+    <style name="notitle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Main_AppTheme" parent="NoActionBarAppTheme">
+
+    </style>
+
+    <style name="bank_add_one">
+        <item name="android:textSize">@dimen/text_size_13sp</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="bank_add_edite">
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+        <item name="android:textSize">@dimen/text_size_13sp</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:textColorHint">@color/color_999</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/dp_15dp</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginLeft">35dp</item>
+    </style>
+    <style name="check_box">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/seletor_appy_type</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="check_box_bank">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/seletor_bank</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_width">15dp</item>
+    </style>
+    <style name="ly_layout">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ly_bottom_red">
+        <item name="android:background">@color/app_theme_red</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="tv_car_goumai">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+        <item name="android:textColor">@color/color_999</item>
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="tv_car_jiaoyi">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+        <item name="android:textColor">@color/app_theme_red</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="tv_operation_finsh">
+        <item name="android:background">@drawable/bg_paysuccess_border_rectangle</item>
+        <item name="android:textColor">@color/app_theme_red</item>
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">140dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DialogBottom">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled" tools:ignore="NewApi">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <!--加载dialog的style-->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="setpassword_text">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+
+    <declare-styleable name="ProgressLayout">
+        <attr name="loadingProgressBarWidth" format="dimension"/>
+        <attr name="loadingProgressBarHeight" format="dimension"/>
+        <attr name="loadingBackgroundColor" format="color"/>
+
+        <attr name="emptyImageWidth" format="dimension"/>
+        <attr name="emptyImageHeight" format="dimension"/>
+        <attr name="emptyTitleTextSize" format="dimension"/>
+        <attr name="emptyContentTextSize" format="dimension"/>
+        <attr name="emptyTitleTextColor" format="color"/>
+        <attr name="emptyContentTextColor" format="color"/>
+        <attr name="emptyBackgroundColor" format="color"/>
+
+        <attr name="errorImageWidth" format="dimension"/>
+        <attr name="errorImageHeight" format="dimension"/>
+        <attr name="errorTitleTextSize" format="dimension"/>
+        <attr name="errorContentTextSize" format="dimension"/>
+        <attr name="errorTitleTextColor" format="color"/>
+        <attr name="errorContentTextColor" format="color"/>
+        <attr name="errorButtonTextColor" format="color"/>
+        <attr name="errorBackgroundColor" format="color"/>
+    </declare-styleable>
+    <style name="LaikaAppTheme"  parent="@android:style/Theme.NoTitleBar.Fullscreen" tools:ignore="DuplicateDefinition">
+        <item name="android:windowBackground" tools:ignore="NewApi">@mipmap/start_img</item>
+    </style>
+    <style name="WelcomeContentOverlay" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@mipmap/start_img</item>
+    </style>
+    <style name="MainTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus" tools:ignore="NewApi">true</item>
+        <item name="android:windowTranslucentNavigation" tools:ignore="NewApi">false</item>
+    </style>
+
+    <declare-styleable name="GoodsViewGroup">
+        <attr name="isSelector" format="boolean" />
+        <attr name="normal_drawable" format="reference" />
+        <attr name="selected_drawable" format="reference" />
+        <attr name="normal_textColor" format="color" />
+        <attr name="selected_textColor" format="color" />
+        <attr name="itemTextSize" format="dimension" />
+        <attr name="horInterval" format="dimension" />
+        <attr name="verInterval" format="dimension" />
+        <attr name="horPadding" format="dimension" />
+        <attr name="verPadding" format="dimension" />
+    </declare-styleable>
+</resources>

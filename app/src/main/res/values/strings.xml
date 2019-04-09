@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">淘卡商城</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="code_mobile">重新发送</string>
+    <string name="read_camere">需要使用存储权限</string>
+    <string name="read_exteranl_storage">需要使用存储权限</string>
+    <string name="read_phone_state">需要获取本机电话识别权限</string>
+    <string name="rationale_read_external">需要使用存储权限</string>
+    <string name="rationale_location_contacts">This app needs access to your location and contacts to know where and who you are.</string>
+    <string name="rationale_sms">This app needs access to your sms to read all your great messages.</string>
+    <string name="write_external_storage">需要使用存储权限</string>
+    <string name="camera">Camera</string>
+    <string name="location_and_contacts">Location and Contacts</string>
+    <string name="sms">SMS</string>
+    <string name="bank_delete_miaosu">*请准确填写银行卡号开户地址和开户信息,若你填写的信息不准确,将可能导致资金提现不成功,请慎重</string>
+    <string name="click_to_refresh"><Data><![CDATA[网络连接失败，点击<font color="#2AC2EF">重试</font>]]></Data></string>
+    <string name="catg_refreshing">后台小妹儿正在加载&#8230;</string>
+    <string name="text_pay">我们已经发送验证码到您的手机</string>
+    <string name="write_wxternal">\"need a WRITE_EXTERNAL_STORAGE\"</string>
+    <string name="service_number">客服QQ:800185927</string>
+    <string name="service_date">服务时间: 09:00-17:30</string>
+    <string name="copy_info">保定信泽 版权所有</string>
+    <string name="copy_date">Copyright©2018 BDXZ.All Rights Reserved</string>
+    <string name="shop_empty">商品已被售空</string>
+    <string name="message_empty">暂时还没有任何消息~</string>
+    <string name="bank_empty">hi～快去开启您的刷卡生涯吧～～</string>
+    <string name="address_empty">暂时还没有地址，快去添加吧~</string>
+    <string name="goumai_empty">暂无购买记录</string>
+    <string name="money_empty">暂时没有余额明细~</string>
+    <string name="pager_empty">暂无商品</string>
+    <string name="str_resell">*温馨提示\n1、转卖完以后,可在个人中心 ”我的余额“中提现.\n2、设置的转卖折扣越低,转卖速度更快.\n3、转卖手续费为限时免费,之后会收取一定费用.</string>
+    <string name="empty_shangping">"暂无购买记录"</string>
+
+</resources>

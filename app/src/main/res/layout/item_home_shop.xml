@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/lv_main_shop"
+
+    android:background="@color/main_bg_gray"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<com.shenyu.laikaword.ui.view.widget.BoderImageView
+    android:id="@+id/iv_main_shop_img"
+    android:padding="1dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="145dp"
+    android:layout_marginTop="15dp"
+    android:layout_height="95dp" />
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:id="@+id/tv_main_shop_name"
+        android:maxLines="2"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:textColor="@color/color_333"
+        android:layout_width="145dp"
+        android:layout_height="35dp" />
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="145dp"
+        android:layout_height="32dp">
+        <TextView
+            android:id="@+id/tv_main_shop_price"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/app_theme_red"
+            android:text="¥94"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="9dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_main_shop_seller"
+            android:layout_width="70dp"
+            android:singleLine="true"
+            android:layout_marginLeft="9dp"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:textSize="@dimen/text_size_10sp"
+            android:textColor="@color/color_999"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_main_shop_seller"
+            android:layout_marginLeft="2dp"
+            android:text="出售"
+            android:gravity="center"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/text_size_10sp" />
+
+        <TextView
+            android:id="@+id/tv_main_shop_purchase"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_main_goumai_rectangle"
+            android:text="抢购"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_width="51dp"
+            android:layout_height="23dp" />
+    </RelativeLayout>
+
+</LinearLayout>
+</LinearLayout>

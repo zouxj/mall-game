@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp">
+        <TextView
+            android:id="@+id/zhuanmai_date"
+            style="@style/tv_car_goumai"
+            android:text="编号:201700531" />
+        <TextView
+            android:id="@+id/tv_purchase_time"
+            style="@style/bank_add_edite"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+    <include layout="@layout/line_view"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="97dp">
+
+        <com.shenyu.laikaword.ui.view.widget.BoderImageView
+            android:id="@+id/img_purchase_img"
+            android:layout_marginLeft="14dp"
+            android:padding="1dp"
+            android:layout_width="106dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="77dp" />
+        <RelativeLayout
+            android:layout_marginLeft="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <TextView
+                android:id="@+id/tv_zhuanmai_shop_name"
+                android:text="100元移动充值卡"
+                android:textSize="@dimen/text_size_15sp"
+                android:textColor="@color/color_333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_zhuamai_price"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/color_333"
+                android:text="x10张"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:textColor="@color/color_999"
+                android:text="状态"
+                android:textSize="@dimen/text_size_12sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <include layout="@layout/line_view"/>
+    <TextView
+        android:drawableLeft="@mipmap/mine"
+        android:layout_marginLeft="13dp"
+        android:id="@+id/tv_purchase_indent_no"
+        android:drawablePadding="7dp"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/text_size_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_666"
+        android:text="来卡小猪 12391231233"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp" />
+
+
+    <TextView
+        android:id="@+id/tv_purchase_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:gravity="center_vertical"
+        android:text="广东深圳市南山高新园泰邦科技大厦"
+        android:textColor="@color/color_666"
+        android:textSize="@dimen/text_size_12sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/tv_purchase_indent_no"
+        android:layout_alignStart="@+id/tv_purchase_indent_no"
+   />
+    <include layout="@layout/line_view"/>
+    <TextView
+        android:id="@+id/tv_purchase_order_number"
+        android:paddingLeft="35dp"
+        android:text="快递单号"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/text_size_12sp"
+        android:textColor="@color/color_666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tv_jingd_order_number"
+        android:paddingLeft="35dp"
+        android:text="京东单号："
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_12sp"
+        android:textColor="@color/color_666"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        />
+</LinearLayout>

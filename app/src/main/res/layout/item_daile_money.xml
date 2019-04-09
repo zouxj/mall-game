@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minHeight="63dp"
+    android:paddingLeft="10dp"
+    android:background="@color/white"
+    android:paddingRight="10dp"
+    android:layout_height="63dp">
+    <TextView
+        android:id="@+id/tv_chongzhi_type"
+        android:textSize="@dimen/text_size_15sp"
+        android:textColor="@color/color_333"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_mongey_time"
+        android:textColor="@color/color_999"
+        android:layout_below="@+id/tv_chongzhi_type"
+        android:layout_marginTop="1dp"
+        android:textSize="@dimen/text_size_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_money_count"
+        android:textSize="@dimen/text_size_15sp"
+        android:textColor="@color/color_999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

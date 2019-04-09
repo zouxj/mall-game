@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/id_title"
+    android:minHeight="50dp"
+    android:background="@mipmap/top_bg"
+    android:layout_height="50dp">
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="35dp"
+        android:layout_marginLeft="13dp"
+        android:layout_height="35dp">
+<ImageView
+    android:id="@+id/bt_top_img"
+    android:layout_width="30dp"
+    android:layout_centerVertical="true"
+    android:src="@mipmap/left_user_icon"
+    android:layout_height="30dp"/>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/tv_point"
+        android:layout_margin="3dp"
+        android:background="@drawable/cicle_point"
+        android:layout_width="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="10dp" />
+    </RelativeLayout>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+<ImageView
+    android:id="@+id/iv_message"
+    android:layout_width="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="12dp"
+    android:layout_centerVertical="true"
+    android:background="@mipmap/exchange"
+    android:layout_height="wrap_content" />
+
+</RelativeLayout>

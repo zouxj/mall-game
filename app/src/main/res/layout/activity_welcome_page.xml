@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shenyu.laikaword.module.launch.StartActivity$WelcomePageActivity">
+
+
+    <include layout="@layout/layout_banner"/>
+    <TextView
+        android:id="@+id/wl_tv_tiao"
+        android:layout_marginTop="12dp"
+        android:textSize="10sp"
+        android:layout_marginRight="@dimen/dp_15dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="45dp"
+        android:background="@drawable/weclome_rectangle_tiaoguo"
+        android:textColor="@color/white"
+        android:text="跳过"
+        android:gravity="center"
+        android:layout_height="25dp" />
+    
+    
+    <TextView
+        android:id="@+id/tv_into_app"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="立即体验"
+        android:textColor="@color/white"
+        android:layout_marginBottom="49dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/weclome_rectangle"
+        android:layout_width="163dp"
+        android:layout_height="43dp" />
+</RelativeLayout>

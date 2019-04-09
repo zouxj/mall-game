@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_gray"
+    android:orientation="vertical"
+    tools:context="com.shenyu.laikaword.module.us.appsetting.UserInfoActivity">
+    <include layout="@layout/toolbar_layout"/>
+    <RelativeLayout
+        android:id="@+id/rl_bd_phone"
+        style="@style/ly_layout">
+
+        <TextView
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="修改手机号"
+            />
+        <TextView
+            android:id="@+id/tv_upate_phone"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="14dp"
+            android:text="未绑定"
+            android:textSize="@dimen/text_size_13sp"
+            android:textColor="@color/color_999"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/head_user_back"
+            android:layout_toLeftOf="@+id/head_user_back"
+            android:layout_toStartOf="@+id/head_user_back"
+            android:layout_marginEnd="14dp" />
+        <ImageView
+            android:id="@+id/head_user_back"
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/right_back"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_bottom_view"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bd_account"
+        style="@style/ly_layout">
+
+        <TextView
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="账号绑定"
+            />
+
+        <ImageView
+            android:id="@+id/head_user_name"
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:background="@mipmap/right_back"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_bottom_view"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_seting_pay_password"
+        style="@style/ly_layout">
+
+        <TextView
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="支付密码设置"
+            />
+
+        <ImageView
+            android:id="@+id/head_user_qq"
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:background="@mipmap/right_back"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

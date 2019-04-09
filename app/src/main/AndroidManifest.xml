@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shenyu.laikaword">
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission
+        android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:ignore="UniquePermission" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    tools:ignore="ProtectedPermissions" />
+    <permission
+        android:name="com.shenyu.laikaword.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"
+        tools:ignore="UniquePermission" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.shenyu.laikaword.permission.JPUSH_MESSAGE" />
+
+    <application
+        android:name=".module.launch.LaiKaApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".module.launch.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LaikaAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.shenyu.laikaword.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <service android:name=".model.net.downloadmanager.DownLoadService" />
+
+        <activity android:name=".module.login.ui.activity.LoginActivity" />
+        <activity
+            android:name=".module.home.ui.activity.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".module.launch.WelcomePageActivity" />
+
+        <receiver
+            android:name=".jpush.TalkReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.shenyu.laikaword" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".jpush.AppJPushMessageReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- hotfix配置 -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24659306-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="ecdc301c7fac7e942eeb76031d237e7b" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCh2EpzZ3jSFQgAGWmdKO2xKECg4u1RIXaUfD0eaoPxcFc6KHC+SfJHtYGYI9NsvgFFt2llBVZtAd/qJWetjSywFJSBJVEJILRvHcEiHErKiN5j+wIJ7vK3sYI628pCOAYcbA2U0z73mGOG3XbEidCU0vCPsCW4Lx3EFb+Ac64JgpgA/0BIMH4Y7NHWHFZHWtGMu2CpYkPDyfR1AOx8lqyQLepC4Ltby9YhCbFRzs/5fjA0axrRvXpJ5ouhU7NZwj5iUFzsA+khfU1QoWa/InQAGoKmEcC0yIDwOM0zBDs6rwt7z4RT0wtj1UQD9R7LpXHqd6JpD7oSDmAmwm5Xk3GNAgMBAAECggEAaOuE6Get5dOIijfvRdkgrnZ/30z9uFjPPNeF78/xlXXUtnk9Db92d5JtXynqiFZtELskcj8Rlj1e4bY6DkK1M7lDxK1iaV5wWpCZgfmBaudr9Ljmy3XCl99Vo76U0nTrUUWjUFXaPjzmWKn9ss/9Dl3pYd05trukule2/BkCPFsIMtTX7smKAoTZ5FQKbenoc01c7SLw5DWLB9EC/PuOGHNaR0cSRozUb8sHyCsKDLdbR2nu2NY6L7uXHqQunH9o9DNyzyq8PBYmrWjGR/l4ZoT0a6j7nvdIobCyg0HN3hV8iSC1Lg/cSejyDjKogGTcAC5XV1CG4laOT+ebhAJZwQKBgQDsmqwfET6lmgr7sgfak5upxg9nr3hXrP5g/defgwshcpH1NAzRv0bFZzTsMnR5S4l3pzKY1eQYr7e9FPbOz/5RrbdwH5q/97Hik4MpfaeSaa0HaiQaVj+GUaIg4OJxzRXkVAIEYOU3B7XeGqw1YuIsvkfvUx6f54O/mFeSn7EHqQKBgQCvHLwgMUiuO3m/0Lk0Q4/H1J2tvRfP95GBt9na/wZowhXAqxXYrpb0hdJ1ciaKvc5+vPvUSaTkkrZpc2jNu8bnj+Ady1Q1KT/+doCdGusP3RYzwXgoHGfXUO+Pb048ffSUkzrr2WYPfuHm4vQnFH5ogxJ6i1sT6A8yVbfCZsH5RQKBgGTyJMdoexr6Wv9B2Ln3yi0n9ICfS6/Uff9xreI/batKj11XZLTEb/Re8SRo7mqlwLPNIPg2IYgqyDCi1h4sfWvput7ajRKkIj/yAb7c/naoIYuNTHP0IkwzXgG7EMHO5y0wbl/h20mcP4rQRHLOioLeeCByjRlaFErVO1+yRDxpAoGAUVLi+4Bn5KKydCaXHHKT/5X6dIlw2aB77uZXQqFVdKlOOOA7kRnj+UN87hZJV/22PJ2/xmM9NPn9xRNYBNPEGB51UuDvBpFVqvOV32B08jUW7opXJymqABEScGacyvMj9yw5HPclsuSWPQgBo3SdECRvHIJDlgcbp6CvapUWWJECgYEAyLJW4iWtEdRomairdSwT/TvDMyuRpGJIfnYxrsugm6mG9kNJK815TP8tgsk+o2ytJycr0mDkUNJ9a52ApXT3781CtMPArt+QxwSe+r8CTINaYG2XO0oWTOuDS33TcBjBqTETi42jb0ZwgPe7B/cVQHgY/Div3GAtWdmBt92kOuU=" />
+
+        <activity android:name=".module.us.wallet.remaining.UserRemainingActivity" />
+        <activity android:name=".module.us.wallet.withdraw.WthdrawMoneyActivity" />
+        <activity android:name=".module.us.wallet.recharge.RechargeMoneyActivity" />
+        <activity android:name=".module.goods.pickupgoods.ui.activity.PurchaseCardActivity" />
+        <activity android:name=".module.us.wallet.DetailMoneyActivity" />
+        <activity android:name=".module.goods.BuyGoodsActivity" />
+        <activity android:name=".module.us.goodcards.ui.activity.CardPackageActivity" />
+        <activity android:name=".module.us.bankcard.ui.activity.SelectBankIDActivity" />
+        <activity android:name=".module.us.appsetting.SettingSystemActivity" />
+        <activity android:name=".module.us.appsetting.aboutus.AboutAppActivity" />
+        <activity android:name=".module.us.appsetting.acountbind.ui.activity.AccountBindActivity" />
+        <activity android:name=".module.us.appsetting.acountbind.ui.activity.BoundPhoneActivity" />
+        <activity android:name=".module.us.appsetting.UserInfoActivity" />
+        <activity
+            android:name="com.leo618.mpermission.AppSettingsDialogHolderActivity"
+            android:exported="false"
+            android:theme="@style/MPermissions.Transparent" />
+        <activity android:name=".module.us.appsetting.updateus.UpdateUserNameActivity" />
+        <activity android:name=".module.us.bankcard.ui.activity.AddBankCardActivity" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101425071" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.shenyu.laikaword.wxapi.WXEntryActivity" />
+        <activity android:name=".module.goods.order.ui.activity.ConfirmOrderActivity" />
+        <activity android:name=".module.goods.order.ShopSuccessActivity" />
+        <activity android:name=".module.us.bankcard.ui.activity.BankInfoActivity" />
+        <activity android:name=".module.us.address.ui.activity.AddressInfoActivity" />
+        <activity android:name=".module.us.address.ui.activity.EditAddressActivity" />
+        <activity android:name=".module.goods.pickupgoods.ui.activity.PickUpActivity" />
+        <activity android:name=".model.web.ShopDateilActivity" />
+        <activity android:name=".module.us.address.ui.activity.SelectAddressActivity" />
+        <activity android:name=".module.goods.pickupgoods.ui.activity.PickUpTelActivity" />
+        <activity android:name=".module.goods.pickupgoods.ui.activity.PickUpStateActivity" />
+        <activity android:name=".module.goods.pickupgoods.ui.activity.PickUpSuccessActivity" />
+        <activity android:name=".module.us.setpassword.SetPassWordOneActivity" />
+        <activity android:name=".module.us.setpassword.SetPassWordTwoActivity" />
+        <activity android:name=".module.us.appsetting.acountbind.ui.activity.AcountBdingSuccessActivity" />
+        <activity
+            android:name=".module.us.setpassword.SetPassWordMsgCodeActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.shenyu.laikaword.module.mine.setpassword.SetPassWordMsgCodeActivity" />
+        <activity android:name=".module.us.message.UserMessageActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.shenyu.laikaword.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <activity android:name=".model.web.GuessActivity" />
+
+        <!-- 注册支付宝网页支付，当手机为安装支付宝的时候自动跳转到网页支付。只需要在这配置文件中加下面配置。 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".module.us.wallet.withdraw.WthdrawDetailsActivity" />
+        <activity android:name=".module.us.wallet.recharge.RechargeSuccessActivity" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59ffd891aed1797aa8000196" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <activity android:name=".module.us.resell.ui.activity.ResellActivity" />
+        <activity android:name=".module.us.resell.ui.activity.ResellDetailsActivity" />
+        <activity android:name=".module.us.AccountSecurityActivity" />
+        <activity android:name=".module.us.appsetting.acountbind.ui.activity.ChangeBindPhoneActivity" />
+        <activity android:name=".module.us.appsetting.acountbind.ui.activity.ChangeBindPhoneInputCodeActivity" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity android:name=".module.us.resell.ui.activity.ResellInputCodeActivity" />
+        <activity android:name=".module.us.resell.ui.activity.CommitResellActivity" />
+        <activity android:name=".module.us.resell.ui.activity.ResellFinshActivity" />
+        <activity android:name=".module.us.resell.ui.activity.CDkeyActivity"></activity>
+    </application>
+
+</manifest>

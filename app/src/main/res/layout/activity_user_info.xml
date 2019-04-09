@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_gray"
+    android:orientation="vertical"
+    tools:context="com.shenyu.laikaword.module.us.appsetting.UserInfoActivity">
+<include layout="@layout/toolbar_layout"/>
+    <RelativeLayout
+        android:id="@+id/set_rl_user_info"
+        style="@style/ly_layout">
+
+        <TextView
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="个人头像"
+            />
+        <ImageView
+            android:id="@+id/set_change_user_head"
+            android:layout_width="40dp"
+            android:layout_marginRight="14dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/head_user_back"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/head_user_back"
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/right_back"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_bottom_view"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_nickname"
+        style="@style/ly_layout">
+
+        <TextView
+
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="用户名"
+            />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="14dp"
+            android:textSize="@dimen/text_size_13sp"
+            android:textColor="@color/color_999"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_bottom_view"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/set_rl_user_acount_bd"
+        style="@style/ly_layout">
+
+        <TextView
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="昵称"
+            />
+
+        <TextView
+            android:id="@+id/change_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="14dp"
+            android:textSize="@dimen/text_size_13sp"
+            android:textColor="@color/color_999"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/head_user_name"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/head_user_name"
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:background="@mipmap/right_back"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_bottom_view"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_bank"
+        style="@style/ly_layout">
+
+        <TextView
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="银行卡"
+            />
+
+        <TextView
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_bank_count"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_size_13sp"
+            android:drawablePadding="10dp"
+            android:textColor="@color/color_999"
+            android:drawableRight="@mipmap/right_back"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_bottom_view"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_shouhuo_address"
+        style="@style/ly_layout">
+
+        <TextView
+            style="@style/bank_add_one"
+            android:layout_centerVertical="true"
+            android:text="收货地址"
+            />
+
+
+        <ImageView
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:background="@mipmap/right_back"
+            android:layout_height="wrap_content" />
+        <include layout="@layout/line_bottom_view"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
